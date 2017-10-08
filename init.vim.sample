@@ -82,8 +82,7 @@ command Term tabnew | term
 
 " visual config
 set number
-set clipboard=unnamed
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set clipboard+=unnamedplus
 set runtimepath^=~/.vim/bundle/ag
 
 " Enable Vim's fuzzy finder
