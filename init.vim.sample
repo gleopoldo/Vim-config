@@ -96,6 +96,8 @@ syntax on
 colorscheme wombat256mod
 filetype plugin on
 
+nmap <C-P> :FZF<CR>
+
 set expandtab shiftwidth=2 softtabstop=2 tabstop=2 smarttab
 set nowrap
 
