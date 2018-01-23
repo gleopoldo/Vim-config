@@ -15,6 +15,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 " Emmet script
 Plug 'mattn/emmet-vim'
+" Airline
+Plug 'vim-airline/vim-airline'
+" Tagbar
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 """""""""""""""""""""""""""""""""
@@ -89,7 +93,7 @@ set runtimepath^=~/.vim/bundle/ag
 set path+=**
 
 syntax on
-colorscheme wombat256
+colorscheme wombat256mod
 filetype plugin on
 
 set expandtab shiftwidth=2 softtabstop=2 tabstop=2 smarttab
@@ -101,6 +105,3 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 " Navigation in neovim terminal
 :tnoremap <ESC> <C-\><C-n>
 :nnoremap <leader>n :NERDTreeToggle<CR>
-
-highlight Trail ctermbg=red guibg=red
-call matchadd('Trail', '\s\+$', 100)
