@@ -4,7 +4,8 @@ setup:
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; ~/.fzf/install
 	# Install python deps, xclip and silver-searcher
 	sudo apt-get install python-software-properties xclip python-dev python-pip \
-		             python3-dev python3-pip silversearcher-ag gnome-tweak-tool
+		             python3-dev python3-pip silversearcher-ag gnome-tweak-tool \
+								 exuberant-ctags
 	# update with neovim ubuntu PPA
 	sudo add-apt-repository ppa:neovim-ppa/stable
 	sudo apt-get update

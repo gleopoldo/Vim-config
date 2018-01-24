@@ -104,6 +104,9 @@ filetype plugin on
 nmap <C-P> :FZF<CR>
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
+" Tagbar configuration
+nmap <F8> :TagbarToggle<CR>
+
 set expandtab shiftwidth=2 softtabstop=2 tabstop=2 smarttab
 set nowrap
 
