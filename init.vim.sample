@@ -19,6 +19,8 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 " Tagbar
 Plug 'majutsushi/tagbar'
+" Ag
+Plug 'numkil/ag.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""
@@ -96,7 +98,11 @@ syntax on
 colorscheme wombat256mod
 filetype plugin on
 
+" Ag / Fuzzy finder configuration
+" Must set the default command in order to include hidden files in the ag
+" search
 nmap <C-P> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
 set expandtab shiftwidth=2 softtabstop=2 tabstop=2 smarttab
 set nowrap
