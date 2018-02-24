@@ -54,7 +54,7 @@ else
 fi
 
 if ! $(grep markdown ~/.zshrc &> /dev/null); then
-  cat .ctags.sample >> ~/.ctags
+  ln -f $samples_dir/ctags.sample ~/.ctags
 fi
 
 #################################
