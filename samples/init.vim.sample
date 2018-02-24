@@ -109,6 +109,15 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 " Tagbar configuration
 nmap <F8> :TagbarToggle<CR>
 
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+\ }
+
 set expandtab shiftwidth=2 softtabstop=2 tabstop=2 smarttab
 set nowrap
 

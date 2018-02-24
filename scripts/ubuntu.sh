@@ -47,13 +47,15 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 nvim "+PlugInstall | :qall"
 echo "Done"
 
-echo -n "Setting up nv alias... "
 if ! $(grep nvim ~/.zshrc &> /dev/null); then
   echo "alias nv='nvim'" >> ~/.zshrc
 else
   echo -n "already found aliases... skipping... "
 fi
-echo "Done"
+
+if ! $(grep markdown ~/.zshrc &> /dev/null); then
+  cat .ctags.sample >> ~/.ctags
+fi
 
 #################################
 #######  Installing tmux  #######
