@@ -12,4 +12,8 @@ unbind %
 # reload config file (change file location to your the tmux.conf you want to use)
 bind r source-file ~/.tmux.conf
 
+# enable scrolling
 set -g mouse on 
+
+# set ESC timeout to zero
+set -s escape-time 0
