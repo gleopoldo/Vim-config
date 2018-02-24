@@ -21,6 +21,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 " Ag
 Plug 'numkil/ag.vim'
+" Vue
+Plug 'posva/vim-vue'
 call plug#end()
 
 """""""""""""""""""""""""""""""""

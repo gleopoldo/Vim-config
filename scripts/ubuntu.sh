@@ -2,7 +2,12 @@
 
 set -e
 
-installation_path=~/.config/nvim
+neovim_installation_path=~/.config/nvim
+samples_dir=./samples
+
+##################################
+# Installing neovim dependencies #
+##################################
 
 echo -n "Installing dependencies... "
 if [ -f ~/.fzf ]; then
@@ -14,19 +19,26 @@ sudo apt-get install python-software-properties xclip python-dev python-pip \
 							 exuberant-ctags
 echo "Done"
 
+#################################
+####### Installing neovim #######
+#################################
+
 echo -n "Preparing to install neovim... "
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim
 echo "Done"
 
-
-echo -n "Linking configs to $installation_path... "
+echo -n "Linking configs to $neovim_installation_path... "
 # creates the new directory if not exists
-mkdir -p $installation_path
+mkdir -p $neovim_installation_path
 # force the linking, removing previous config files
-ln -f ./init.vim.sample $installation_path/init.vim
+ln -f $samples_dir/init.vim.sample $neovim_installation_path/init.vim
 echo "Done"
+
+#################################
+### Installing neovim plugins ###
+#################################
 
 echo -n "Installing plug deps... "
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -41,6 +53,16 @@ if ! $(grep nvim ~/.zshrc &> /dev/null); then
 else
   echo -n "already found aliases... skipping... "
 fi
+echo "Done"
+
+#################################
+#######  Installing tmux  #######
+#################################
+
+echo -n "Installing tmux... "
+sudo apt-get install tmux
+
+ln -f $samples_dir/tmux.conf.sample ~/.tmux.conf
 echo "Done"
 
 echo "Setup complete"
