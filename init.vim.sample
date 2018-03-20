@@ -23,6 +23,10 @@ Plug 'majutsushi/tagbar'
 Plug 'numkil/ag.vim'
 " Vim-vue
 Plug 'posva/vim-vue'
+" JSX
+Plug 'mxw/vim-jsx'
+" JS
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 """""""""""""""""""""""""""""""""
