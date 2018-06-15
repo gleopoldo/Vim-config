@@ -27,6 +27,10 @@ Plug 'posva/vim-vue'
 Plug 'mxw/vim-jsx'
 " JS
 Plug 'pangloss/vim-javascript'
+" Vim surround
+Plug 'tpope/vim-surround'
+" Elixir
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 """""""""""""""""""""""""""""""""

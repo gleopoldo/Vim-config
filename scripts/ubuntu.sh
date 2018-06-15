@@ -15,7 +15,7 @@ echo_red () {
 ##################################
 
 echo_red "Installing dependencies... "
-{
+
   if [ -f ~/.fzf ]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git $fzf_dir; $fzf_dir/install
   fi
@@ -23,7 +23,7 @@ echo_red "Installing dependencies... "
   sudo apt-get install -y python-software-properties xclip python-dev python-pip \
                  python3-dev python3-pip silversearcher-ag gnome-tweak-tool \
                  exuberant-ctags
-} > /dev/null
+
 echo "Done"
 
 #################################
@@ -31,11 +31,11 @@ echo "Done"
 #################################
 
 echo_red "Preparing to install neovim... "
-{
+
   sudo add-apt-repository -y ppa:neovim-ppa/stable
   sudo apt-get update
   sudo apt-get install -y neovim 
-} > /dev/null
+
 echo "Done"
 
 echo_red "Creating nvim config path at $neovim_installation_path... "
@@ -56,12 +56,12 @@ echo "Done"
 #################################
 
 echo_red "Installing plug deps... "
-{
+
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   nvim "+PlugInstall | :qall"
-} > /dev/null
+
 echo "Done"
 
 if ! $(grep nvim ~/.zshrc &> /dev/null); then
