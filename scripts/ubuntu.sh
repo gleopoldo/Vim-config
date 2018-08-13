@@ -20,7 +20,7 @@ echo_red "Installing dependencies... "
     git clone --depth 1 https://github.com/junegunn/fzf.git $fzf_dir; $fzf_dir/install
   fi
 
-  sudo apt-get install -y python-software-properties xclip python-dev python-pip \
+  sudo apt-get install -y software-properties-common xclip python-dev python-pip \
                  python3-dev python3-pip silversearcher-ag gnome-tweak-tool \
                  exuberant-ctags
 
