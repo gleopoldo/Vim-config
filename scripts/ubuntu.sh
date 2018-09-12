@@ -18,6 +18,7 @@ echo_red "Installing dependencies... "
 
   if [ -f ~/.fzf ]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git $fzf_dir; $fzf_dir/install
+    echo "export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .gems -g \"\"'" >> ~/.zshrc
   fi
 
   sudo apt-get install -y software-properties-common xclip python-dev python-pip \
@@ -34,7 +35,7 @@ echo_red "Preparing to install neovim... "
 
   sudo add-apt-repository -y ppa:neovim-ppa/stable
   sudo apt-get update
-  sudo apt-get install -y neovim 
+  sudo apt-get install -y neovim
 
 echo "Done"
 

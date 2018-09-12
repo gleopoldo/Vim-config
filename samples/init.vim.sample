@@ -31,6 +31,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
 " Elixir
 Plug 'elixir-editors/vim-elixir'
+" Hightlight trailing spaces
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 """""""""""""""""""""""""""""""""
@@ -131,6 +133,10 @@ set nowrap
 
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
+
+" Hightlight trailing spaces
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
 
 " Navigation in neovim terminal
 :tnoremap <ESC> <C-\><C-n>
